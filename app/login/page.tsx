@@ -2,19 +2,16 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { LoginForm } from '@/components/auth/login-form';
 import { useAuth } from '@/hooks/use-auth';
 
-export default function Home() {
+export default function LoginPage() {
   const { user, loading } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
-    if (!loading) {
-      if (user) {
-        router.push('/dashboard');
-      } else {
-        router.push('/login');
-      }
+    if (!loading && user) {
+      router.push('/dashboard');
     }
   }, [user, loading, router]);
 
@@ -26,5 +23,9 @@ export default function Home() {
     );
   }
 
-  return null;
+  if (user) {
+    return null;
+  }
+
+  return <LoginForm />;
 }
