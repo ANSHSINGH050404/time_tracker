@@ -79,6 +79,8 @@ export function LoginForm() {
               {loading ? 'Signing in...' : 'Sign in'}
             </Button>
           </form>
+          <h1>USER-email:ansh@demo.com ,password:12345678</h1>
+          <h1>ADMIN-email:ansh@ansh.com ,password:12345678</h1>
           
         </CardContent>
       </Card>
