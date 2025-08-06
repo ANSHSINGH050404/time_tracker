@@ -79,11 +79,7 @@ export function LoginForm() {
               {loading ? 'Signing in...' : 'Sign in'}
             </Button>
           </form>
-          <div className="mt-6 text-center text-sm text-gray-600 dark:text-gray-400">
-            Demo Accounts:<br />
-            Admin: admin@demo.com / admin123<br />
-            User: user@demo.com / user123
-          </div>
+          
         </CardContent>
       </Card>
     </div>
